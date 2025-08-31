@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import Typewriter from 'typewriter-effect';
+import { Link } from 'react-router';
 
 const Hero = () => {
   return (
@@ -34,7 +35,9 @@ const Hero = () => {
             </h2>
             <p className='w-auto md:w-[641px] pt-5 pb-8 font-body text-white leading-[32px] text-[18px]'>Bringing ideas to life with code, I create interactive, seamless, and engaging web experiences that leave a lasting impression. Using HTML, CSS, React, and Tailwind, I focus on building websites that are not only visually appealing but also intuitive, responsive, and highly functional. My goal is to craft digital experiences that delight users, elevate brands, and turn ideas into reality.</p>
             <div className='flex gap-x-6'>
+             <Link to='/about'>
               <button className='bg-primary text-white font-body py-3 px-[25px] rounded cursor-pointer hover:scale-110 transition-all duration-300'>About Me</button>
+             </Link>
               <button className='bg-primary text-white font-body py-3 px-[25px] rounded cursor-pointer hover:scale-110 transition-all duration-300'>Download Resume</button>
             </div>
             <h2 className='text-white font-heading font-semibold text-[40px] leading-[65px] mt-8'>Find Me On</h2>
