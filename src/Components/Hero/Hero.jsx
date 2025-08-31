@@ -10,18 +10,18 @@ const Hero = () => {
   return (
     <div className='bg-black pb-[90px] pt-[150px] overflow-visible'>
       <Container>
-        <div className='flex justify-between'>
-          <div className='w-[60%]'>
+        <div className='lg:flex justify-between items-center'>
+          <div className='w-auto md:w-[60%]'>
             <h3 className='font-body text-[25px] leading-[40px] text-primary'>Hello, I'm</h3>
-            <h1 className='text-white font-heading font-semibold text-[45px] leading-[65px]'>Fatema Tuz Zohra</h1>
+            <h1 className='text-white font-heading font-semibold text-[37px] md:text-[45px] leading-[55px] md:leading-[65px]'>Fatema Tuz Zohra</h1>
             <h2 className='text-primary font-body font-medium text-[26px] leading-[40px] py-2'>
           <Typewriter
     onInit={(typewriter) => {
       typewriter
-        .typeString("Frontend Web Developer") // টেক্সট টাইপ করবে
+        .typeString("Frontend Web Developer") 
         .callFunction(() => {
           const cursor = document.querySelector(".Typewriter__cursor");
-          if (cursor) cursor.style.display = "none"; // টাইপ শেষে cursor hide
+          if (cursor) cursor.style.display = "none"; 
         })
         .start();
     }}
@@ -32,7 +32,7 @@ const Hero = () => {
     }}
   />
             </h2>
-            <p className='w-[641px] pt-5 pb-8 font-body text-white leading-[32px] text-[18px]'>Bringing ideas to life with code, I create interactive, seamless, and engaging web experiences that leave a lasting impression. Using HTML, CSS, React, and Tailwind, I focus on building websites that are not only visually appealing but also intuitive, responsive, and highly functional. My goal is to craft digital experiences that delight users, elevate brands, and turn ideas into reality.</p>
+            <p className='w-auto md:w-[641px] pt-5 pb-8 font-body text-white leading-[32px] text-[18px]'>Bringing ideas to life with code, I create interactive, seamless, and engaging web experiences that leave a lasting impression. Using HTML, CSS, React, and Tailwind, I focus on building websites that are not only visually appealing but also intuitive, responsive, and highly functional. My goal is to craft digital experiences that delight users, elevate brands, and turn ideas into reality.</p>
             <div className='flex gap-x-6'>
               <button className='bg-primary text-white font-body py-3 px-[25px] rounded cursor-pointer hover:scale-110 transition-all duration-300'>About Me</button>
               <button className='bg-primary text-white font-body py-3 px-[25px] rounded cursor-pointer hover:scale-110 transition-all duration-300'>Download Resume</button>
@@ -54,7 +54,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div>
+          <div className='text-center mt-10 md:pl-[100px] lg:pl-0'>
             <img className='shadow-[0_0_25px_rgba(128,128,128,0.3)] rounded-2xl' src={aney} alt="" />
           </div>
         </div>

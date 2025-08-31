@@ -29,15 +29,15 @@ const Navbar = () => {
         scrolled ? "bg-black/70 shadow-lg" : "bg-black"
       }`}>
             <Container>
-                <div className='flex justify-between items-center'>
-                    <div className='bg-black'>
+                <div className='md:flex justify-between items-center'>
+                      <div className='bg-black flex justify-between items-center'>
                         <p className='font-heading font-bold text-[22px] bg-gradient-to-r from-primary to-[#ECD8F2] text-transparent bg-clip-text'>Fatema</p>
-                        <div>
+                        <div className='md:hidden text-white'>
                           <FaBars onClick={handleClick} />
                         </div>
                     </div>
                     <div>
-                        <ul className='flex gap-x-3 items-center font-body font-medium text-white text-[17px]'>
+                        <ul className='hidden md:flex gap-x-3 items-center font-body font-medium text-white text-[17px]'>
                             <li>
                                 <Link to="/" className='active text-primary py-2 px-3'>Home</Link>
                             </li>
@@ -54,6 +54,25 @@ const Navbar = () => {
                     </div>
                 </div>
             </Container>
+            {
+              show &&
+              <div>
+                        <ul className='flex flex-col bg-primary gap-3 items-center font-body font-medium text-white text-[17px] py-8 rounded-[0_0_0_126px]'>
+                            <li>
+                                <Link to="/" className='active text-black py-8 px-3 text-[20px]'>Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/about" className='py-8 px-3 text-[20px] hover:text-black'>About</Link>
+                            </li>
+                            <li>
+                                <Link to="/project" className='py-8 px-3 text-[20px] hover:text-black'>Projects</Link>
+                            </li>
+                            <li>
+                                <Link to="/contact" className='py-8 px-3 text-[20px] hover:text-black'>Contact</Link>
+                            </li>
+                        </ul>
+                    </div>
+            }
         </div>
   )
 }

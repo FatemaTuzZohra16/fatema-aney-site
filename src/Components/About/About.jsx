@@ -34,13 +34,13 @@ const About = () => {
                         data-aos-duration="1500"
                         className='font-heading font-semibold text-white text-[40px] leading-[70px] border-b border-white inline-block'> About <span className='text-primary'>Me</span></h1>
                 </div>
-                <div className='flex gap-x-[155px] items-center pt-[50px]'>
-                    <div className='w-[70%]'>
+                <div className='lg:flex gap-x-[155px] items-center pt-[50px]'>
+                    <div className='w-auto lg:w-[70%]'>
                         <p className='font-body text-white text-[20px]'>Hi, I’m <span className='text-primary'>Fatema (Aney)</span> — a passionate Front-End Developer with a strong focus on creating clean, responsive, and user-friendly websites. I enjoy transforming ideas into reality through code, blending creativity with functionality to deliver seamless digital experiences.</p>
                         <p className='font-body text-white text-[20px] py-4'> I’ve learned and worked with modern technologies like HTML, CSS, Tailwind CSS, JavaScript, React, and Git/GitHub. Currently, I’m expanding my skills into Next.js, PHP, and MySQL to grow as a full-stack developer.</p>
                         <p className='font-body text-white text-[20px]'> Beyond coding, I believe in continuous learning, problem-solving, and building projects that make an impact. My goal is to contribute to a dynamic team where I can learn, grow, and create value through technology.</p>
                     </div>
-                    <div className='w-[30%]'>
+                    <div className='w-auto lg:w-[30%] pt-[40px] lg:pt-0 sm:pl-[185px] lg:pl-0'>
                         <img src={vector} alt="" />
                     </div>
                 </div>
@@ -51,7 +51,7 @@ const About = () => {
                         className='font-heading font-medium text-white text-[35px] leading-[70px] inline-block'>My <span className='text-primary'>Skills</span></h1>
                 </div>
 
-                <div className="skills mt-5 flex flex-wrap gap-x-10 items-center justify-center">
+                <div className="skills mt-5 flex flex-wrap gap-10 items-center justify-center">
 
                     <div className='border border-primary text-white py-4 px-7 rounded shadow-lg hover:scale-110 hover:shadow-lg transition-all duration-300'>
                         <SiHtml5 size={50} />
@@ -78,7 +78,7 @@ const About = () => {
                 <div className='text-center pt-12'>
                     <h1 className='font-heading font-medium text-white text-[35px] leading-[70px] inline-block'>Tools & <span className='text-primary'>Platform</span></h1>
                 </div>
-                <div className="tools mt-5 flex flex-wrap gap-x-10 items-center justify-center">
+                <div className="tools mt-5 flex flex-wrap gap-10 items-center justify-center">
 
                     <div className='border border-primary text-white py-4 px-7 rounded shadow-lg hover:scale-110 hover:shadow-lg transition-all duration-300'>
                         <VscVscode size={50} />

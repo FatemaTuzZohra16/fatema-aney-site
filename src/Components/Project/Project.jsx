@@ -100,7 +100,7 @@ const Project = () => {
                             data-aos-duration="1500"
                             className='font-heading font-semibold text-white text-[45px] leading-[70px] border-b border-white inline-block'>My <span className='text-primary'>Projects</span></h1>
                     </div>
-                    <div className='flex flex-wrap justify-between gap-y-6 text-white mt-[90px]'>
+                    <div className='lg:flex flex-wrap justify-between gap-y-6 text-white mt-[90px]'>
                         {
                             projects.map((project) => (
                                 <Tilt
@@ -108,12 +108,12 @@ const Project = () => {
                                     glareEnable={true}
                                     glareMaxOpacity={0.5}
                                     glareColor="#ffffff"
-                                    className="w-[32%]"
-                                    tiltMaxAngleX={1}  // X-axis movement
-                                    tiltMaxAngleY={10}   // Y-axis বন্ধ
+                                    className="w-auto lg:w-[32%]"
+                                    tiltMaxAngleX={1}  
+                                    tiltMaxAngleY={10}   
                                     transitionSpeed={400}  
                                 >
-                                    <div className='border rounded-2xl overflow-hidden'>
+                                    <div className='border rounded-2xl overflow-hidden mt-10 lg:mt-0'>
                                         <img src={project.img} className='w-full h-[200px] object-cover object-top' />
                                         <div className='p-5'>
                                             <div>

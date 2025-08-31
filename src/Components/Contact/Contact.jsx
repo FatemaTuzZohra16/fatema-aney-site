@@ -68,7 +68,7 @@ const Contact = () => {
         }
     }
     return (
-        <div className='bg-black pt-[100px]'>
+        <div className='bg-black pt-[60px] lg:pt-[100px]'>
             <Container>
                 <div className='text-center'>
                     <h1 data-aos="fade-up"
@@ -76,7 +76,7 @@ const Contact = () => {
                         className='font-heading font-semibold text-white text-[45px] leading-[70px] border-b border-white inline-block'>GET IN <span className='text-primary'>TOUCH</span></h1>
                 </div>
                <div className='flex justify-center'>
-                <div className='flex gap-x-[200px] items-center mt-[80px] pb-[100px]'>
+                <div className='lg:flex gap-x-[200px] items-center mt-[80px] pb-[100px]'>
                     <div className='text-white'>
                         <h2 className="text-4xl font-heading font-semibold mb-4">Let’s <span className='text-primary'>Connect</span> ✨</h2>
                         <p className="text-lg leading-relaxed mb-3 font-body">
@@ -105,8 +105,8 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div>
-                        <div className='w-[500px] font-body border border-white mx-auto px-6 py-12 rounded-2xl'>
+                    <div className='mt-[60px] lg:mt-0'>
+                        <div className='w-auto md:w-[500px] font-body border border-white mx-auto px-6 py-12 rounded-2xl'>
                             <label className="block text-white font-medium mb-2">Name</label>
                             <input
                                 onChange={handleName}
