@@ -1,14 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import Home from './Components/Pages/Home'
+import React from 'react';
+import StarryBackground from './StarryBackground';
+import PortfolioContent from "./PortfolioContent";
+import Home from './Components/Pages/Home';
 
 function App() {
-
   return (
-    <>
-    <Home/>
-    </>
-  )
+    <div className="relative">
+      <StarryBackground />
+      <PortfolioContent />
+      <Home />
+    </div>
+  );
 }
 
-export default App
+export default App;

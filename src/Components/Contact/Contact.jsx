@@ -29,44 +29,44 @@ const Contact = () => {
         });
     }, []);
 
-    const handleName= (e)=>{
-        setName( e.target.value)
+    const handleName = (e) => {
+        setName(e.target.value)
         setNameErr("")
     }
-    const handleEmail= (e)=>{
+    const handleEmail = (e) => {
         setEmail(e.target.value)
         setEmailErr("")
-}
-    const handleMessage= (e)=>{
+    }
+    const handleMessage = (e) => {
         setMessage(e.target.value)
         setMessageErr("")
-}
-    const handleButton =(e)=>{
-        if(!name){
+    }
+    const handleButton = (e) => {
+        if (!name) {
             setNameErr("Please Inter Your Email")
-        }else{
+        } else {
             setNameErr("")
         }
-        if(!email){
+        if (!email) {
             setEmailErr("Please Inter Your Email")
-        }else{
-             if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
-            setEmailErr("Invalid Email")
-        }else{
-            setEmailErr("")
+        } else {
+            if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+                setEmailErr("Invalid Email")
+            } else {
+                setEmailErr("")
+            }
         }
-    }
-        if(!message){
+        if (!message) {
             setMessageErr("Write Your Message")
         }
-        if(name && email && message && !nameErr && !emailErr && !messageErr){
-            alert('Successfuly Submitted' )
+        if (name && email && message && !nameErr && !emailErr && !messageErr) {
+            alert('Your form has been submitted.  We will get back to you soon.  Please wait while we redirect you.......')
             setName("")
             setEmail("")
             setMessage("")
             navigate("/Success")
         }
-    } 
+    }
     return (
         <div className='bg-black pt-[100px]'>
             <Container>
@@ -75,8 +75,8 @@ const Contact = () => {
                         data-aos-duration="1500"
                         className='font-heading font-semibold text-white text-[45px] leading-[70px] border-b border-white inline-block'>GET IN <span className='text-primary'>TOUCH</span></h1>
                 </div>
-                <div className='flex justify-between items-center mt-[80px] pb-[100px]'>
-                    {/* Left Content */}
+               <div className='flex justify-center'>
+                <div className='flex gap-x-[200px] items-center mt-[80px] pb-[100px]'>
                     <div className='text-white'>
                         <h2 className="text-4xl font-heading font-semibold mb-4">Let’s <span className='text-primary'>Connect</span> ✨</h2>
                         <p className="text-lg leading-relaxed mb-3 font-body">
@@ -105,38 +105,41 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className='w-[500px] font-body border border-white mx-auto px-6 py-12 rounded-2xl'>
-                        <label className="block text-white font-medium mb-2">Name</label>
-                        <input 
-                        onChange={handleName}
-                        type="text" 
-                        value={name}
-                        name='name'
-                        placeholder='Your Name' 
-                        className='w-full text-black p-3 outline-0 border rounded bg-white ' />
-                        <p className='font-body text-red-900 pt-2'>{nameErr}</p>
-                        <label className="block text-white font-medium mb-2 mt-5">Email</label>
-                        <input 
-                        onChange={handleEmail}
-                        type="email" 
-                        value={email}
-                        name='email'
-                        placeholder='Your Email' 
-                        className='w-full text-black p-3 outline-0 border rounded bg-white' />
-                        <p className='font-body text-red-900 pt-2'>{emailErr}</p>
-                        <label className="block text-white font-medium mb-2 mt-5">Message</label>
-                        <textarea 
-                        onChange={handleMessage}
-                        name="message"
-                        value={message}
-                         placeholder='Your Message'
-                         className='w-full h-[100px] text-black p-3 outline-0 border rounded bg-white' />
-                         <p className='font-body text-red-900 pt-2'>{messageErr}</p>
+                    <div>
+                        <div className='w-[500px] font-body border border-white mx-auto px-6 py-12 rounded-2xl'>
+                            <label className="block text-white font-medium mb-2">Name</label>
+                            <input
+                                onChange={handleName}
+                                type="text"
+                                value={name}
+                                name='name'
+                                placeholder='Your Name'
+                                className='w-full text-black p-3 outline-0 border rounded bg-white ' />
+                            <p className='font-body text-red-900 pt-2'>{nameErr}</p>
+                            <label className="block text-white font-medium mb-2 mt-5">Email</label>
+                            <input
+                                onChange={handleEmail}
+                                type="email"
+                                value={email}
+                                name='email'
+                                placeholder='Your Email'
+                                className='w-full text-black p-3 outline-0 border rounded bg-white' />
+                            <p className='font-body text-red-900 pt-2'>{emailErr}</p>
+                            <label className="block text-white font-medium mb-2 mt-5">Message</label>
+                            <textarea
+                                onChange={handleMessage}
+                                name="message"
+                                value={message}
+                                placeholder='Your Message'
+                                className='w-full h-[100px] text-black p-3 outline-0 border rounded bg-white' />
+                            <p className='font-body text-red-900 pt-2'>{messageErr}</p>
 
-                        <button onClick={handleButton} className='bg-primary text-white font-body py-3 px-[25px] rounded w-full mt-6
+                            <button onClick={handleButton} className='bg-primary text-white font-body py-3 px-[25px] rounded w-full mt-6
                      '>Send Message</button>
+                        </div>
                     </div>
                 </div>
+                </div> 
             </Container>
             <Footer />
         </div>

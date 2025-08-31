@@ -9,6 +9,7 @@ import Project from './Components/Project/Project.jsx'
 import BlankRoute from './Components/MainRoute/BlankRoute.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import Success from './Components/Success/Success.jsx'
+import About from './Components/About/About.jsx'
 
 const router = createBrowserRouter([
    {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { path: "project", Component: Project },
       { path: "contact", Component: Contact },
       { path: "success", Component: Success },
+      { path: "about", Component: About },
 ]
 }
 ]);

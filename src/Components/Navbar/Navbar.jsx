@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Container from '../Layout/Container';
 import { Link } from 'react-router';
+import { FaBars } from "react-icons/fa6";
 
 
 const Navbar = () => {
      const [scrolled, setScrolled] = useState(false);
+     const [show, setShow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,10 +16,13 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+       const handleClick = () => {
+    setShow(prevShow => !prevShow)
+  };
   
   return (
      <div className={`fixed top-0 w-full z-50 transition-all duration-500 py-4 ${
@@ -27,6 +32,9 @@ const Navbar = () => {
                 <div className='flex justify-between items-center'>
                     <div className='bg-black'>
                         <p className='font-heading font-bold text-[22px] bg-gradient-to-r from-primary to-[#ECD8F2] text-transparent bg-clip-text'>Fatema</p>
+                        <div>
+                          <FaBars onClick={handleClick} />
+                        </div>
                     </div>
                     <div>
                         <ul className='flex gap-x-3 items-center font-body font-medium text-white text-[17px]'>
@@ -34,7 +42,7 @@ const Navbar = () => {
                                 <Link to="/" className='active text-primary py-2 px-3'>Home</Link>
                             </li>
                             <li>
-                                <Link to="/" className='py-2 px-3 hover:text-primary'>About</Link>
+                                <Link to="/about" className='py-2 px-3 hover:text-primary'>About</Link>
                             </li>
                             <li>
                                 <Link to="/project" className='py-2 px-3 hover:text-primary'>Projects</Link>
