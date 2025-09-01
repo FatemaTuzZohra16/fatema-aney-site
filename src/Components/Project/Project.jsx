@@ -100,7 +100,7 @@ const Project = () => {
             <Container>
                 <div>
                     <div className='text-center'>
-                        <h1 data-aos="fade-up"
+                        <h1 data-aos="fade-down"
                             data-aos-duration="1500"
                             className='font-heading font-semibold text-white text-[45px] leading-[70px] border-b border-white inline-block'>My <span className='text-primary'>Projects</span></h1>
                     </div>

@@ -35,7 +35,7 @@ const About = () => {
                   </div>
             <Container>
                 <div className='text-center'>
-                    <h1 data-aos="fade-up"
+                    <h1 data-aos="fade-down"
                         data-aos-duration="1500"
                         className='font-heading font-semibold text-white text-[40px] leading-[70px] border-b border-white inline-block'> About <span className='text-primary'>Me</span></h1>
                 </div>
@@ -50,7 +50,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className='text-center pt-[40px]'>
-                    <h1 data-aos="fade-up"
+                    <h1 data-aos="fade-down"
                         data-aos-duration="1500"
                         data-aos-delay="300"
                         className='font-heading font-medium text-white text-[35px] leading-[70px] inline-block'>My <span className='text-primary'>Skills</span></h1>

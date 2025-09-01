@@ -31,7 +31,9 @@ const Navbar = () => {
             <Container>
                 <div className='md:flex justify-between items-center'>
                       <div className='bg-black flex justify-between items-center'>
-                        <p className='font-heading font-bold text-[22px] bg-gradient-to-r from-primary to-[#ECD8F2] text-transparent bg-clip-text'>Fatema</p>
+                        <p className='font-heading font-bold text-[22px] bg-gradient-to-r from-primary to-[#ECD8F2] text-transparent bg-clip-text'>
+                          <Link>Fatema</Link>
+                        </p>
                         <div className='md:hidden text-white'>
                           <FaBars onClick={handleClick} />
                         </div>
