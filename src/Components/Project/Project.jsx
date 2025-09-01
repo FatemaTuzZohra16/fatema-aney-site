@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Tilt from 'react-parallax-tilt';
+import { ShootingStarsAndStarsBackgroundDemo } from '../ui/ShootingStarsAndStarsBackgroundDemo'
 
 const Project = () => {
     useEffect(() => {
@@ -92,7 +93,10 @@ const Project = () => {
         },
     ]
     return (
-        <div className='bg-black py-[90px]'>
+        <div className='relative bg-black py-[90px]'>
+            <div className="absolute inset-0 w-full h-[250px]">
+                    <ShootingStarsAndStarsBackgroundDemo />
+                  </div>
             <Container>
                 <div>
                     <div className='text-center'>

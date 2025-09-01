@@ -16,6 +16,7 @@ import { FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
 import { IoLogoFirebase } from "react-icons/io5";
 import { FaNpm } from "react-icons/fa6";
+import { ShootingStarsAndStarsBackgroundDemo } from '../ui/ShootingStarsAndStarsBackgroundDemo';
 
 const About = () => {
     useEffect(() => {
@@ -27,7 +28,11 @@ const About = () => {
         });
     }, []);
     return (
-        <div className='bg-black py-[60px]'>
+        <div className='relative
+        bg-black py-[60px]'>
+            <div className="absolute inset-0 w-full h-full">
+                    <ShootingStarsAndStarsBackgroundDemo />
+                  </div>
             <Container>
                 <div className='text-center'>
                     <h1 data-aos="fade-up"

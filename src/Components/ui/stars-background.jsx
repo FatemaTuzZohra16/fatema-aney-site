@@ -1,6 +1,5 @@
-
-import { cn } from "../../lib/utils";
-
+"use client";;
+import { cn } from "@/lib/utils";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
 export const StarsBackground = ({

@@ -8,6 +8,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import Footer from '../Footer/Footer';
 import { useNavigate } from 'react-router';
+import { ShootingStarsAndStarsBackgroundDemo } from '../ui/ShootingStarsAndStarsBackgroundDemo';
 
 
 const Contact = () => {
@@ -68,7 +69,10 @@ const Contact = () => {
         }
     }
     return (
-        <div className='bg-black pt-[60px] lg:pt-[100px]'>
+        <div className='relative bg-black pt-[60px] lg:pt-[100px]'>
+            <div className="absolute inset-0 w-full h-full">
+                    <ShootingStarsAndStarsBackgroundDemo />
+                  </div>
             <Container>
                 <div className='text-center'>
                     <h1 data-aos="fade-up"
@@ -90,7 +94,7 @@ const Contact = () => {
                                 email
                             </a>.
                         </p>
-                        <div className='social links mt-6'>
+                        <div className='social links mt-6 relative z-10'>
                             <ul className='flex items-center gap-x-5'>
                                 <li className='w-[50px] h-[50px] rounded-full bg-white flex items-center justify-center text-primary hover:bg-[#0A192F] hover:text-white transform transition duration-300 hover:-translate-y-2'>
                                     <a href=""><FaGithub size={24} /></a>
@@ -105,7 +109,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className='mt-[60px] lg:mt-0'>
+                    <div className='mt-[60px] lg:mt-0 relative z-10'>
                         <div className='w-auto md:w-[500px] font-body border border-white mx-auto px-6 py-12 rounded-2xl'>
                             <label className="block text-white font-medium mb-2">Name</label>
                             <input
