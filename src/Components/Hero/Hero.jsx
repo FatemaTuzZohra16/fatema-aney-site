@@ -37,7 +37,7 @@ const Hero = () => {
                 }}
               />
             </h2>
-            <div className='text-white font-bold'>sjdecfebvefcwocf</div>
+            <div className='text-white font-bold'>Aney</div>
             <p className='w-auto md:w-[641px] pt-5 pb-8 font-body text-white leading-[32px] text-[18px]'>Bringing ideas to life with code, I create interactive, seamless, and engaging web experiences that leave a lasting impression. Using HTML, CSS, React, and Tailwind, I focus on building websites that are not only visually appealing but also intuitive, responsive, and highly functional. My goal is to craft digital experiences that delight users, elevate brands, and turn ideas into reality.</p>
             <div className='flex gap-x-6'>
               <Link to='/about'>
